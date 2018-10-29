@@ -1,0 +1,57 @@
+{
+  "config": {
+    "title": "Bwkz Playground Builder",
+    "description": "My awesome app using docz",
+    "themeConfig": {},
+    "menu": [],
+    "ordering": "descending",
+    "version": "0.1.0",
+    "repository": null,
+    "native": false
+  },
+  "entries": {
+    "src/widgets/QuickLinksWidget.mdx": {
+      "id": "0928664b109b04d2db02c2171a581657",
+      "filepath": "src/widgets/QuickLinksWidget.mdx",
+      "link": null,
+      "slug": "src-widgets-quick-links-widget",
+      "route": "/src-widgets-quick-links-widget",
+      "name": "Quick links widget",
+      "order": 0,
+      "menu": null,
+      "headings": []
+    },
+    "src/components/BwkzButton/BwkzButton.mdx": {
+      "name": "BwkzButton Components",
+      "id": "f9dab31a85fc1fdc95e7dd423f6b0d2c",
+      "filepath": "src/components/BwkzButton/BwkzButton.mdx",
+      "link": null,
+      "slug": "src-components-bwkz-button-bwkz-button",
+      "route": "/src-components-bwkz-button-bwkz-button",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "bwkzbutton",
+          "value": "BwkzButton"
+        },
+        {
+          "depth": 3,
+          "slug": "the-default-view",
+          "value": "The default view"
+        },
+        {
+          "depth": 3,
+          "slug": "examples",
+          "value": "Examples"
+        },
+        {
+          "depth": 3,
+          "slug": "search-bar-props",
+          "value": "Search Bar Props"
+        }
+      ]
+    }
+  }
+}
