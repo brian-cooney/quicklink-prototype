@@ -1,0 +1,44 @@
+{
+  "data": {
+    "quickLinks": [
+      {
+        "title": "Logo",
+        "text": "Bacon ipsum dolor amet ham burgdoggen pig, boudin beef fatback alcatra leberkas cow andouille pastrami turkey. Boudin kevin alcatra capicola andouille. Meatloaf pancetta chuck shank, meatball pig kielbasa",
+        "buttonText": "Logo"
+        "image": "https://unsplash.it/800/600?image=39" 
+
+      },
+      {
+        "id": "password",
+        "inputName": "password",
+        "inputType": "password",
+        "inputLabel": "New Password",
+        "inputTooltip": "A Password",
+        "validation": {
+          "minChars": 0,
+          "maxChars": 50,
+          "size": 0,
+          "validateEmail": 0,
+          "hyperlink": 0,
+          "mandatory": 1
+        }
+      },
+      {
+        "id": "firstName",
+        "inputName": "firstName",
+        "inputType": "text",
+        "inputLabel": "First Name",
+        "readOnly": 0,
+        "inputTooltip": "First Name",
+        "validation": {
+          "minChars": 1,
+          "maxChars": 50,
+          "size": 0,
+          "validateEmail": 0,
+          "hyperlink": 0,
+          "mandatory": 1
+        }
+      }
+    ]
+  }
+}

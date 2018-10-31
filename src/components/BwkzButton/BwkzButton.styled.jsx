@@ -8,7 +8,7 @@ export const BwkzButton = styled.button`
   background: ${props => props.backgroundColor};
   color: ${props => props.color};
 
-  line-height: 60px;
+  line-height: ${props => props.lineHeight};
   cursor: pointer;
 
   &.position {

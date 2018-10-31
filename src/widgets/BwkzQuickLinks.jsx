@@ -30,7 +30,7 @@ class BwkzQuickLinksComponent extends Component {
         <Ul>
           <Li>
             <BwkzQuickLinksCard>
-              <BwkzQuickLinksImage />
+              <BwkzQuickLinksImage backgroundImage="https://unsplash.it/800/600?image=39" />
               <BwkzQuickLinksCardContent>
                 <BwkzQuickLinksCardTitle>Flex</BwkzQuickLinksCardTitle>
                 <BwkzQuickLinksCardText>
@@ -44,6 +44,7 @@ class BwkzQuickLinksComponent extends Component {
                   borderRadius="1em"
                   backgroundColor="#F5F2F0"
                   color="#E04B69"
+                  lineHeight="3"
                 >
                   View
                 </BwkzButtonComponent>
@@ -52,7 +53,7 @@ class BwkzQuickLinksComponent extends Component {
           </Li>
           <Li>
             <BwkzQuickLinksCard>
-              <BwkzQuickLinksImage />
+              <BwkzQuickLinksImage backgroundImage="https://unsplash.it/800/600?image=38" />
               <BwkzQuickLinksCardContent>
                 <BwkzQuickLinksCardTitle>Flex</BwkzQuickLinksCardTitle>
                 <BwkzQuickLinksCardText>
@@ -66,6 +67,7 @@ class BwkzQuickLinksComponent extends Component {
                   borderRadius="1em"
                   backgroundColor="#F5F2F0"
                   color="#E04B69"
+                  lineHeight="3"
                 >
                   View
                 </BwkzButtonComponent>
@@ -74,7 +76,7 @@ class BwkzQuickLinksComponent extends Component {
           </Li>
           <Li>
             <BwkzQuickLinksCard>
-              <BwkzQuickLinksImage />
+              <BwkzQuickLinksImage backgroundImage="https://unsplash.it/800/600?image=37" />
               <BwkzQuickLinksCardContent>
                 <BwkzQuickLinksCardTitle>Flex</BwkzQuickLinksCardTitle>
                 <BwkzQuickLinksCardText>
@@ -88,6 +90,7 @@ class BwkzQuickLinksComponent extends Component {
                   borderRadius="1em"
                   backgroundColor="#F5F2F0"
                   color="#E04B69"
+                  lineHeight="3"
                 >
                   View
                 </BwkzButtonComponent>
@@ -96,10 +99,10 @@ class BwkzQuickLinksComponent extends Component {
           </Li>
           <Li>
             <BwkzQuickLinksCard>
-              <BwkzQuickLinksImage />
+              <BwkzQuickLinksImage backgroundImage="https://unsplash.it/800/600?image=55" />
               <BwkzQuickLinksCardContent>
                 <BwkzQuickLinksCardTitle>Flex</BwkzQuickLinksCardTitle>
-                <BwkzQuickLinksCardText>
+                <BwkzQuickLinksCardText color={styles.textColor}>
                   This is the shorthand for flex-grow, flex-shrink and
                   flex-basis combined. The second and third parameters
                   (flex-shrink and flex-basis) are optional. Default is 0 1
@@ -110,6 +113,7 @@ class BwkzQuickLinksComponent extends Component {
                   borderRadius="1em"
                   backgroundColor="#F5F2F0"
                   color="#E04B69"
+                  lineHeight="3"
                 >
                   View
                 </BwkzButtonComponent>

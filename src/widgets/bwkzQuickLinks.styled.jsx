@@ -38,13 +38,12 @@ export const BwkzQuickLinksCard = styled.div`
 `;
 
 export const BwkzQuickLinksImage = styled.div`
-  background-image: url(https://unsplash.it/800/600?image=59);
-  background-position: center center;
+  background-image: ${props =>
+    props.backgroundImage && `url(${props.backgroundImage})`};
   background-repeat: no-repeat;
   background-size: cover;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  filter: contrast(70%);
   overflow: hidden;
   position: relative;
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
@@ -74,4 +73,5 @@ export const BwkzQuickLinksCardText = styled.p`
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+  color: ${props => props.color};
 `;
