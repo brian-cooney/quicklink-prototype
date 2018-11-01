@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const BwkzQuickLinks = styled.div`
   background-color: ${props => props.backgroundColor};

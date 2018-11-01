@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const BwkzButton = styled.button`
   padding: 0 20px;

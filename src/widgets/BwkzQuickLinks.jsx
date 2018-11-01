@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Flex, Box, Card, Text, Image } from 'rebass';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import BwkzButtonComponent from '../components/BwkzButton/BwkzButton';
 
 import {
