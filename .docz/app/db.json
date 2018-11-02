@@ -10,16 +10,27 @@
     "native": false
   },
   "entries": {
-    "src/widgets/QuickLinksWidget.mdx": {
-      "id": "0928664b109b04d2db02c2171a581657",
-      "filepath": "src/widgets/QuickLinksWidget.mdx",
+    "src/widgets/BwkzQuickLinks.mdx": {
+      "name": "BwkzQuickLinks Widget",
+      "id": "788407c15a2744fc5487d0720554d7d3",
+      "filepath": "src/widgets/BwkzQuickLinks.mdx",
       "link": null,
-      "slug": "src-widgets-quick-links-widget",
-      "route": "/src-widgets-quick-links-widget",
-      "name": "Quick links widget",
+      "slug": "src-widgets-bwkz-quick-links",
+      "route": "/src-widgets-bwkz-quick-links",
       "order": 0,
       "menu": null,
-      "headings": []
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "search-bar",
+          "value": "Search bar"
+        },
+        {
+          "depth": 3,
+          "slug": "the-default-quicklinks-widget",
+          "value": "The default QuickLinks Widget"
+        }
+      ]
     },
     "src/components/BwkzButton/BwkzButton.mdx": {
       "name": "BwkzButton Components",

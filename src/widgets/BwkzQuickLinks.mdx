@@ -4,52 +4,19 @@
 
 import {Playground, PropsTable} from 'docz';
 import BwkzQuickLinks from './BwkzQuickLinks';
+import api from './bwkzQuickLinksData'
+
 
 # Search bar
 
-### The default search bar widget
-<BwkzSearchBar />
+### The default QuickLinks Widget
 
-*This is the default search bar placed with no additional options included.*
+<BwkzQuickLinks data={api}/>
 
-### Examples
 
-<BwkzSearchBar
-  backgroundColor="transparent"
-  searchButtonBackgroundColor="#F1C17D"
-  borderRadius="100px"
-  searchBackgroundColor="#eee"
-  searchButtonPosition="right"
-  searchButtonColor="#fff"
-  searchTextColor="#333"
-  borderColor="#ccc"
-  searchPlaceHolderText="Search any asset"
-  topText="<h3>Life is good</h3><p>When you search more</p>"
-/>
 
-<BwkzSearchBar
-  backgroundColor="#323332"
-  searchButtonBackgroundColor="#FFDD00"
-  searchBackgroundColor="#FFDD00"
-  searchTextColor="#333"
-  borderColor="#ccc"
-  bottomText="<i>Stay Classy</i>"
-  textColor="#fff"
-/>
 
-### Search Bar Props
+<PropsTable of={BwkzQuickLinks}/>
 
-<PropsTable of={BwkzSearchBar}/>
 
-Have a go with the prop types within the playground below
 
-<Playground>
-  <BwkzSearchBar
-    backgroundColor="transparent"
-    searchButtonBackgroundColor="#FFDD00"
-    searchBackgroundColor="#FFDD00"
-    searchTextColor="#333"
-    borderColor="#ccc"
-    backgroundColor="#323332"
-  />
-</Playground>

@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 
 import BwkzQuickLinksComponent from './widgets/BwkzQuickLinks';
+import BwkzQuickLinksComponentFullimage from './widgets/BwkzQuickLinksFullImage';
+import api from './widgets/bwkzQuickLinksData';
 
 class App extends Component {
   render() {
     return (
       <div>
         <BwkzQuickLinksComponent
+          data={api}
           backgroundColor="azure"
           backgroundImage=""
-          cardTitle="<h2>Flex</h2>"
-          cardText="<p>Bacon ipsum dolor amet sausage beef boudin andouille shoulder ball tip. Ground round t-bone salami pastrami, turducken short ribs</p>"
-          textColor="#000"
         />
+
+        <BwkzQuickLinksComponentFullimage backgroundColor="beige" />
       </div>
     );
   }
