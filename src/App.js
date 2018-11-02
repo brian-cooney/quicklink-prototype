@@ -8,11 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BwkzQuickLinksComponent
-          data={api}
-          backgroundColor="azure"
-          backgroundImage=""
-        />
+        <BwkzQuickLinksComponent data={api} />
 
         <BwkzQuickLinksComponentFullimage backgroundColor="beige" />
       </div>

@@ -18,7 +18,7 @@ import {
 
 class BwkzQuickLinksComponent extends Component {
   constructor(props) {
-    console.log(props);
+    console.log(props.data);
     super(props);
     this.state = {
       api: props.data.quickLinks,
@@ -31,14 +31,13 @@ class BwkzQuickLinksComponent extends Component {
     });
 
   render() {
-    const { ...styles } = this.props;
     const { api, isFullImage } = this.state;
-    console.log(this.toggleFullImage);
+    console.log(api[0].containerImage);
 
     return (
       <BwkzQuickLinks
-        backgroundColor={styles.backgroundColor}
-        backgroundImage={styles.backgroundImage}
+        backgroundColor={api[0].containerColor}
+        backgroundImage={api[0].containerImage}
       >
         <button type="button" onClick={this.toggleFullImage}>
           Toggle type of card
@@ -52,7 +51,7 @@ class BwkzQuickLinksComponent extends Component {
                   >
                     <BwkzQuickLinksFullImage />
                     <BwkzQuickLinksCardContent>
-                      <BwkzQuickLinksCardTitle>
+                      <BwkzQuickLinksCardTitle headingColor={card.headingColor}>
                         {card.heading}
                       </BwkzQuickLinksCardTitle>
                       <BwkzQuickLinksCardText>
@@ -103,6 +102,23 @@ class BwkzQuickLinksComponent extends Component {
   }
 }
 
-BwkzQuickLinks.propTypes = {};
+BwkzQuickLinks.propTypes = {
+  data: PropTypes.shape({
+    quickLinks: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      heading: PropTypes.number,
+      headingColor: PropTypes.string,
+      backgroundColor: PropTypes.number,
+      backgroundImage: PropTypes.string,
+      buttonBackgroundColor: PropTypes.string,
+      buttonText: PropTypes.string,
+      buttonTextColor: PropTypes.string,
+      containerColor: PropTypes.string,
+      containerImage: PropTypes.string,
+      description: PropTypes.string,
+      descriptionColour: PropTypes.string
+    })
+  })
+};
 
 export default BwkzQuickLinksComponent;

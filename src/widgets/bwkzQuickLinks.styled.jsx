@@ -41,6 +41,8 @@ export const BwkzQuickLinksCard = styled.div`
 export const BwkzQuickLinksCardFullImage = styled.div`
   background-image: ${props =>
     props.backgroundImage && `url(${props.backgroundImage})`};
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -94,6 +96,7 @@ export const BwkzQuickLinksCardTitle = styled.div`
   flex: 1 1 auto;
   flex-direction: column;
   font-weight: 600;
+  color: ${props => props.headingColor};
 `;
 
 export const BwkzQuickLinksCardText = styled.p`
