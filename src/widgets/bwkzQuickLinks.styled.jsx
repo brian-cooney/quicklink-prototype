@@ -104,5 +104,5 @@ export const BwkzQuickLinksCardText = styled.p`
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
-  color: ${props => props.color};
+  color: ${props => props.descriptionColour};
 `;

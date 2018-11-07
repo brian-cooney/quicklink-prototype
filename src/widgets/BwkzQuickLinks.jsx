@@ -18,11 +18,11 @@ import {
 
 class BwkzQuickLinksComponent extends Component {
   constructor(props) {
-    console.log(props.data);
+    console.log('now', props.data.quickLinks);
     super(props);
     this.state = {
       api: props.data.quickLinks,
-      isFullImage: true
+      isFullImage: false
     };
   }
   toggleFullImage = () =>
@@ -51,17 +51,20 @@ class BwkzQuickLinksComponent extends Component {
                   >
                     <BwkzQuickLinksFullImage />
                     <BwkzQuickLinksCardContent>
-                      <BwkzQuickLinksCardTitle headingColor={card.headingColor}>
-                        {card.heading}
-                      </BwkzQuickLinksCardTitle>
-                      <BwkzQuickLinksCardText>
-                        {card.description}
-                      </BwkzQuickLinksCardText>
+                      <BwkzQuickLinksCardTitle
+                        headingColor={card.headingColor}
+                        dangerouslySetInnerHTML={{ __html: card.heading }}
+                      />
+
+                      <BwkzQuickLinksCardText
+                        descriptionColour={card.descriptionColour}
+                        dangerouslySetInnerHTML={{ __html: card.description }}
+                      />
                       <BwkzButtonComponent
                         borderColor={card.borderColor}
                         borderRadius="1em"
-                        backgroundColor="#F5F2F0"
-                        color="#E04B69"
+                        backgroundColor={card.buttonBackgroundColor}
+                        color={card.buttonTextColor}
                         lineHeight="3"
                       >
                         {card.buttonText}
@@ -77,18 +80,21 @@ class BwkzQuickLinksComponent extends Component {
                       backgroundImage={card.backgroundImage}
                     />
                     <BwkzQuickLinksCardContent>
-                      <BwkzQuickLinksCardTitle>
-                        {card.heading}
-                      </BwkzQuickLinksCardTitle>
-                      <BwkzQuickLinksCardText>
-                        {card.description}
-                      </BwkzQuickLinksCardText>
+                      <BwkzQuickLinksCardTitle
+                        headingColor={card.headingColor}
+                        dangerouslySetInnerHTML={{ __html: card.heading }}
+                      />
+                      <BwkzQuickLinksCardText
+                        descriptionColour={card.descriptionColour}
+                        dangerouslySetInnerHTML={{ __html: card.description }}
+                      />
                       <BwkzButtonComponent
                         borderColor="#fff"
                         borderRadius="1em"
-                        backgroundColor="#F5F2F0"
+                        backgroundColor={card.buttonBackgroundColor}
                         color="#E04B69"
                         lineHeight="3"
+                        icon=""
                       >
                         {card.buttonText}
                       </BwkzButtonComponent>
