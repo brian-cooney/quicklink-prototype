@@ -21,8 +21,7 @@ class BwkzQuickLinksComponent extends Component {
     console.log('now', props.data.quickLinks);
     super(props);
     this.state = {
-      row1: props.data.quickLinks.row_1,
-      row2: props.data.quickLinks.row_2,
+      api: props.data.quickLinks.rows,
       isFullImage: false,
     };
   }
@@ -32,75 +31,48 @@ class BwkzQuickLinksComponent extends Component {
     });
 
   render() {
-    const { row1, row2, isFullImage } = this.state;
+    const { api, isFullImage } = this.state;
 
     return (
       <BwkzQuickLinks>
         <button type="button" onClick={this.toggleFullImage}>
           Toggle type of card
         </button>
-        <Ul>
-          {row1.map((card, i) => (
-            <Li key={i}>
-              <BwkzQuickLinksCardFullImage
-                backgroundImage={card.backgroundImage}
-              >
-                <BwkzQuickLinksFullImage />
-                <BwkzQuickLinksCardContent>
-                  <BwkzQuickLinksCardTitle
-                    headingColor={card.headingColor}
-                    dangerouslySetInnerHTML={{ __html: card.heading }}
-                  />
 
-                  <BwkzQuickLinksCardText
-                    descriptionColour={card.descriptionColour}
-                    dangerouslySetInnerHTML={{ __html: card.description }}
-                  />
-                  <BwkzButtonComponent
-                    borderColor={card.borderColor}
-                    borderRadius="1em"
-                    backgroundColor={card.buttonBackgroundColor}
-                    color={card.buttonTextColor}
-                    lineHeight="3"
-                  >
-                    {card.buttonText}
-                  </BwkzButtonComponent>
-                </BwkzQuickLinksCardContent>
-              </BwkzQuickLinksCardFullImage>
-            </Li>
-          ))}
-        </Ul>
-        <Ul>
-          {row2.map((card, i) => (
-            <Li key={i}>
-              <BwkzQuickLinksCardFullImage
-                backgroundImage={card.backgroundImage}
-              >
-                <BwkzQuickLinksFullImage />
-                <BwkzQuickLinksCardContent>
-                  <BwkzQuickLinksCardTitle
-                    headingColor={card.headingColor}
-                    dangerouslySetInnerHTML={{ __html: card.heading }}
-                  />
+        {api.map((row, i) => (
+            console.log(row)
+          <Ul>
+            {row[i].cards.map((card, i) => (
+              <Li key={i}>
+                <BwkzQuickLinksCardFullImage
+                  backgroundImage={card.backgroundImage}
+                >
+                  <BwkzQuickLinksFullImage />
+                  <BwkzQuickLinksCardContent>
+                    <BwkzQuickLinksCardTitle
+                      headingColor={card.headingColor}
+                      dangerouslySetInnerHTML={{ __html: card.heading }}
+                    />
 
-                  <BwkzQuickLinksCardText
-                    descriptionColour={card.descriptionColour}
-                    dangerouslySetInnerHTML={{ __html: card.description }}
-                  />
-                  <BwkzButtonComponent
-                    borderColor={card.borderColor}
-                    borderRadius="1em"
-                    backgroundColor={card.buttonBackgroundColor}
-                    color={card.buttonTextColor}
-                    lineHeight="3"
-                  >
-                    {card.buttonText}
-                  </BwkzButtonComponent>
-                </BwkzQuickLinksCardContent>
-              </BwkzQuickLinksCardFullImage>
-            </Li>
-          ))}
-        </Ul>
+                    <BwkzQuickLinksCardText
+                      descriptionColour={card.descriptionColour}
+                      dangerouslySetInnerHTML={{ __html: card.description }}
+                    />
+                    <BwkzButtonComponent
+                      borderColor={card.borderColor}
+                      borderRadius="1em"
+                      backgroundColor={card.buttonBackgroundColor}
+                      color={card.buttonTextColor}
+                      lineHeight="3"
+                    >
+                      {card.buttonText}
+                    </BwkzButtonComponent>
+                  </BwkzQuickLinksCardContent>
+                </BwkzQuickLinksCardFullImage>
+              </Li>
+            ))}
+          </Ul>
+        ))}
       </BwkzQuickLinks>
     );
   }
