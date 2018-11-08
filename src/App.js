@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
 
-import BwkzQuickLinksComponent from './widgets/BwkzQuickLinks';
-import BwkzQuickLinksComponentRows from './widgets/BwkzQuickLinks_rows';
-import api from './widgets/bwkzQuickLinksData';
-import apiRow from './widgets/bwkzQuickLinksData_rows';
+import BwkzQuickLinksComponent from './widgets/BwkzQuickLinks/BwkzQuickLinks_rows';
+import BwkzQuickLinkItem from './widgets/BwkzQuickLinks/_BwkzQuickLinkItem/BwkzQuickLinkItem';
+import BwkzContainer from './components/BwkzContainer/BwkzContainer';
+
+import { BwkzQuickLinksRow } from './widgets/BwkzQuickLinks/bwkzQuickLinks.styled';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <BwkzQuickLinksComponent data={api} />
-        <BwkzQuickLinksComponentRows data={apiRow} />
-      </div>
+      <BwkzContainer>
+        <BwkzQuickLinksComponent>
+          <BwkzQuickLinksRow>
+            <BwkzQuickLinkItem />
+            <BwkzQuickLinkItem />
+            <BwkzQuickLinkItem />
+            <BwkzQuickLinkItem />
+          </BwkzQuickLinksRow>
+        </BwkzQuickLinksComponent>
+        <BwkzQuickLinksComponent>
+          <BwkzQuickLinksRow>
+            <BwkzQuickLinkItem />
+            <BwkzQuickLinkItem />
+            <BwkzQuickLinkItem />
+          </BwkzQuickLinksRow>
+        </BwkzQuickLinksComponent>
+      </BwkzContainer>
     );
   }
 }

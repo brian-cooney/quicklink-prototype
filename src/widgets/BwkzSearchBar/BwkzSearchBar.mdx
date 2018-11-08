@@ -1,0 +1,116 @@
+---
+    name: "BwkzSearchBar Widget"
+---
+
+import {Playground, PropsTable} from "docz";
+import BwkzSearchBar from "./BwkzSearchBar";
+
+import city1Image from "../../images/city-1.jpg";
+import gym1Image from "../../images/gym-1.jpg";
+import mountains1Image from "../../images/mountains-1.jpg";
+
+# BwkzSearchBar Widget
+
+### The default Widget
+
+<BwkzSearchBar />
+
+*This is the default widget placed with no additional options included.*
+
+### Examples
+
+#### №1
+
+<BwkzSearchBar
+  containerBackgroundImage={city1Image}
+  containerHorizontalPadding="15%"
+  searchBorderRadius="50px"
+  searchFieldBackgroundColor="#fff"
+  searchLineHeight="50px"
+  searchButtonColor="#fff"
+  searchButtonBackgroundColor="#F8A83E"
+  searchButtonPosition="right"
+  textColor="#3B4248"
+  topText="
+    <div style='font-size: 36px;'>Lorem ipsum <b>dolor sit amet</b></div>
+    <p>Lorem ipsum dolor sit amet consectetur</p>
+  "
+/>
+
+#### №2
+
+<BwkzSearchBar
+  containerBackgroundImage={gym1Image}
+  containerHorizontalPadding="15%"
+  searchFieldBackgroundColor="#FFE040"
+  searchFieldPlaceholderColor="#000"
+  searchButtonColor="#000"
+  searchButtonBackgroundColor="#FFE040"
+  textColor="#fff"
+  topText="
+    <div style='font-size: 36px;'>Lorem ipsum <b>dolor sit amet</b></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam odio labore officiis dolore commodi illum deleniti impedit totam adipisci eveniet.</p>
+  "
+  bottomText="<p>Lorem ipsum dolor sit amet.</p>"
+/>
+
+#### №3
+
+<BwkzSearchBar
+  containerBackgroundImage={mountains1Image}
+  containerHorizontalPadding="15%"
+  innerBackgroundColor="rgb(52, 123, 147, 0.5)"
+  innerPadding="30px"
+  searchFieldBackgroundColor="#fff"
+  searchFieldPlaceholderColor="#000"
+  searchButtonColor="#000"
+  searchButtonBackgroundColor="#fff"
+  textColor="#fff"
+  topText="
+    <div style='font-size: 36px;'>Lorem ipsum <b>dolor sit amet</b></div>
+    <p>Aperiam odio labore officiis dolore commodi illum deleniti impedit totam adipisci eveniet.</p>
+  "
+/>
+
+#### №4
+
+<BwkzSearchBar
+  containerBackgroundImage={city1Image}
+  containerHorizontalPadding="15%"
+  innerBackgroundColor="#901E89"
+  innerPadding="30px"
+  innerBorderBottomRightRadius="100px"
+  searchFieldPlaceholderText="Search for assets or pages"
+  searchFieldBackgroundColor="#fff"
+  searchFieldPlaceholderColor="#000"
+  searchButtonColor="#000"
+  searchButtonBackgroundColor="#fff"
+  textColor="#fff"
+  topText="
+    <header style='font-size:32px;'>Welcome to <b>Brother Media Manager</b></header>
+    <p>Your gateway to Brother creative assets and our brand.</p>
+  "
+/>
+
+### Description of the Widget Props
+
+<PropsTable of={BwkzSearchBar}/>
+
+Have a go with the prop types within the playground below
+
+<Playground>
+  <BwkzSearchBar
+    containerBackgroundImage={city1Image}
+    containerHorizontalPadding="15%"
+    innerBackgroundColor="#901E89"
+    innerPadding="30px"
+    innerBorderBottomRightRadius="100px"
+    searchFieldPlaceholderText="Search for assets or pages"
+    searchFieldBackgroundColor="#fff"
+    searchFieldPlaceholderColor="#000"
+    searchButtonColor="#000"
+    searchButtonBackgroundColor="#fff"
+    textColor="#fff"
+    topText="<header style='font-size:32px;'>Welcome to <b>Brother Media Manager</b></header><p>Your gateway to Brother creative assets and our brand.</p>"
+  />
+</Playground>

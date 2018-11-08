@@ -8,7 +8,7 @@ export const BwkzQuickLinks = styled.div`
   padding-bottom: 60px;
 `;
 
-export const Ul = styled.ul`
+export const BwkzQuickLinksRow = styled.ul`
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -17,7 +17,7 @@ export const Ul = styled.ul`
   max-width: 1500px;
 `;
 
-export const Li = styled.li`
+export const BwkzQuickLinksCol = styled.li`
   display: flex;
   padding: 1rem;
   @media (min-width: 40rem) {

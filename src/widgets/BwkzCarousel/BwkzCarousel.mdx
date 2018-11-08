@@ -1,0 +1,144 @@
+---
+    name: "BwkzCarousel Widget"
+---
+
+import {Playground, PropsTable} from 'docz';
+import { BwkzCarousel, BwkzCarouselSlide } from './BwkzCarousel';
+
+import cars1Image from "../../images/cars-1.jpg";
+import cars2Image from "../../images/cars-2.jpg";
+import cars3Image from "../../images/cars-3.jpg";
+
+import woman1Image from "../../images/woman-1.jpg";
+
+# BwkzCarousel Widget
+
+### The default Widget
+
+*This is the default widget placed with no additional options included.*
+
+### Examples
+
+#### №1
+
+<BwkzCarousel
+  containerBackgroundImage={cars1Image}
+  containerMinHeight="580px"
+  containerHorizontalPadding="15px"
+  dotsType="tabs"
+  dotsVerticalPosition="outside"
+  dotsHorizontalPosition="middle"
+  dotsActiveColor="#fff"
+  autoplay={false}
+  arrows={false}
+>
+  <BwkzCarouselSlide
+    backgroundImage={cars2Image}
+    bodyContent="<h3>Lorem ipsum dolor sit.</h3><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, commodi!</p>"
+    bodyHorizontalPosition="left"
+    ctaText="Body left"
+    ctaLink="https://www.brandworkz.com/"
+    dotLabel="White Car"
+  />
+  <BwkzCarouselSlide
+    backgroundImage={cars3Image}
+    bodyContent="<h3>Lorem ipsum dolor sit.</h3><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, commodi!</p>"
+    bodyHorizontalPosition="right"
+    ctaText="Body right"
+    ctaLink="https://www.brandworkz.com/"
+    dotLabel="Red Car"
+  />
+</BwkzCarousel>
+
+#### №2
+
+<BwkzCarousel
+  containerHorizontalPadding="0"
+  dotsType="bars"
+  dotsVerticalPosition="inside"
+  dotsHorizontalPosition="middle"
+  dotsActiveColor="#fff"
+  autoplay={false}
+  arrows={true}
+>
+  <BwkzCarouselSlide
+    backgroundImage={woman1Image}
+    bodyContent="<h3>The body is placed in the middle.</h3><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, commodi!</p>"
+    bodyHorizontalPosition="middle"
+    ctaText="Middle Link"
+    ctaLink="https://www.brandworkz.com/"
+    ctaColor="#fff"
+    ctaBackgroundColor="#e5232f"
+    ctaHorizontalPosition="middle"
+  />
+  <BwkzCarouselSlide
+    backgroundImage={woman1Image}
+    bodyContent="<h3>The body is placed in the middle.</h3><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, commodi!</p>"
+    bodyHorizontalPosition="middle"
+    ctaText="Left Link"
+    ctaLink="https://www.brandworkz.com/"
+    ctaColor="#fff"
+    ctaBackgroundColor="#e5232f"
+    ctaHorizontalPosition="right"
+  />
+  <BwkzCarouselSlide
+    backgroundImage={woman1Image}
+    bodyContent="<h3>The body is placed in the middle.</h3><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, commodi!</p>"
+    bodyHorizontalPosition="middle"
+    ctaText="Right Link"
+    ctaLink="https://www.brandworkz.com/"
+    ctaColor="#fff"
+    ctaBackgroundColor="#e5232f"
+    ctaHorizontalPosition="left"
+  />
+</BwkzCarousel>
+
+### Description of the Widget Props
+
+#### BwkzCarousel
+
+*Propperty table for the BwkzCarousel*
+
+<PropsTable of={BwkzCarousel}/>
+
+#### BwkzCarouselSlide
+
+*Propperty table for each slide of the BwkzCarousel*
+
+<PropsTable of={BwkzCarouselSlide}/>
+
+Have a go with the prop types within the playground below
+
+<Playground>
+  <BwkzCarousel
+    containerHorizontalPadding="0"
+    dotsType="bars"
+    dotsVerticalPosition="inside"
+    dotsHorizontalPosition="middle"
+    dotsActiveColor="#fff"
+    autoplay={false}
+    arrows={true}
+  >
+    <BwkzCarouselSlide
+      backgroundImage={woman1Image}
+      bodyContent="<h3>The body is placed in the middle.</h3><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, commodi!</p>"
+      bodyHorizontalPosition="middle"
+      ctaText="Middle Link"
+      ctaLink="https://www.brandworkz.com/"
+      ctaColor="#fff"
+      ctaBackgroundColor="#e5232f"
+      ctaHorizontalPosition="middle"
+    />
+    <BwkzCarouselSlide
+      backgroundImage={woman1Image}
+      bodyContent="<h3>The body is placed in the middle.</h3><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, commodi!</p>"
+      bodyHorizontalPosition="middle"
+      ctaText="Left Link"
+      ctaLink="https://www.brandworkz.com/"
+      ctaColor="#fff"
+      ctaBackgroundColor="#e5232f"
+      ctaHorizontalPosition="right"
+    />
+  </BwkzCarousel>
+</Playground>
+
