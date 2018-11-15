@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 
 import calculator from '../../lib/calculator';
 
-import {
-  BwkzContainer,
-} from './BwkzContainer.styled';
+import { BwkzContainer } from './BwkzContainer.styled';
 
 class BwkzContainerComponent extends Component {
   constructor(props) {
@@ -19,13 +17,12 @@ class BwkzContainerComponent extends Component {
   }
 
   componentDidMount() {
-    const {
-      minHeight,
-      offset,
-    } = this.props;
+    const { minHeight, offset } = this.props;
 
-    const verticalPadding = calculator
-      .calculateVerticalPadding(this.containerRef.current.clientHeight - offset, minHeight);
+    const verticalPadding = calculator.calculateVerticalPadding(
+      this.containerRef.current.clientHeight - offset,
+      minHeight,
+    );
 
     this.setState({ verticalPadding });
   }
@@ -46,7 +43,6 @@ class BwkzContainerComponent extends Component {
         horizontalPadding={styles.horizontalPadding}
         verticalPadding={verticalPadding}
         minHeight={styles.minHeight}
-
         ref={this.containerRef}
       >
         {children}
@@ -75,15 +71,10 @@ BwkzContainerComponent.propTypes = {
   /**
    * Offset of minimal height the main container
    * that will not be included in height height calculation
-  */
-  offset: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+   */
+  offset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-  ]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.node]).isRequired,
 };
 
 export default BwkzContainerComponent;
