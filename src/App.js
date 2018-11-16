@@ -3,17 +3,31 @@ import React, { Component } from "react";
 import BwkzQuickLinks from "./widgets/BwkzQuickLinks/BwkzQuickLinks";
 import BwkzQuickLinkItem from "./widgets/BwkzQuickLinks/BwkzQuickLinkItem";
 import BwkzContainer from "./components/BwkzContainer/BwkzContainer";
-
+import RebassGrid from "./widgets/rebass-grid/RebassGrid";
+import RebassGridFull from "./widgets/rebass-grid/RebassGridFull";
 import { BwkzQuickLinksRow } from "./widgets/BwkzQuickLinks/BwkzQuickLinks.styled";
-import "./App.css";
+import "./App.scss";
+import "./widgets/rebass-grid/style.css";
+import FlexBox from "./widgets/rebass-grid/Flexbox";
+import Basic from "./widgets/rebass-grid/AdminPanel";
 
 class App extends Component {
+  state = {};
   render() {
-    const row = [1, 2];
-    const col = [1, 2, 3];
-
     return (
-      <BwkzContainer
+      <div>
+        <RebassGrid />
+        {/* <RebassGridFull /> */}
+        {/* <FlexBox /> */}
+        <Basic />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+/* <BwkzContainer
         horizontalPadding="3"
         backgroundColor="#eef1f5"
         backgroundImage="https://unsplash.it/1800/600?image=47"
@@ -42,9 +56,4 @@ class App extends Component {
             </BwkzQuickLinksRow>
           ))}
         </BwkzQuickLinks>
-      </BwkzContainer>
-    );
-  }
-}
-
-export default App;
+      </BwkzContainer> */
