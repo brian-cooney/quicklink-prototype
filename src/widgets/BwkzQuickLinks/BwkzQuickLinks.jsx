@@ -16,3 +16,4 @@ class BwkzQuickLinksComponent extends Component {
 }
 
 export default BwkzQuickLinksComponent;
+

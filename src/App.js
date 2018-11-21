@@ -9,7 +9,7 @@ import { BwkzQuickLinksRow } from "./widgets/BwkzQuickLinks/BwkzQuickLinks.style
 import "./App.scss";
 import "./widgets/rebass-grid/style.css";
 import FlexBox from "./widgets/rebass-grid/Flexbox";
-import Basic from "./widgets/rebass-grid/AdminPanel";
+import EditForm from "./widgets/rebass-grid/AdminPanel";
 
 class App extends Component {
   state = {};
@@ -19,7 +19,10 @@ class App extends Component {
         <RebassGrid />
         {/* <RebassGridFull /> */}
         {/* <FlexBox /> */}
-        <Basic />
+        {/* <Basic /> */}
+        <div>---</div>
+        <EditForm />
+        {/* <MyForm /> */}
       </div>
     );
   }

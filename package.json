@@ -6,13 +6,16 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
     "@fortawesome/react-fontawesome": "^0.1.3",
+    "@tinymce/tinymce-react": "^2.4.0",
     "babel-plugin-styled-components": "^1.8.0",
     "formik": "^1.3.2",
     "node-sass": "^4.10.0",
     "react": "^16.6.0",
+    "react-color": "^2.14.1",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5",
     "rebass": "^3.0.0-9",
+    "styled-bootstrap-components": "^2.0.0",
     "styled-components": "^4.0.2"
   },
   "scripts": {

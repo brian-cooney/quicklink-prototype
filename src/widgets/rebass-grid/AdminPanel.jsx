@@ -1,70 +1,84 @@
-import React from "react";
-import { Formik } from "formik";
-import { Flex, Box, Text } from "rebass";
+import React, { Component } from "react";
+import {
+  Container,
+  Modal,
+  ModalDialog,
+  ModalHeader,
+  ModalTitle,
+  Button,
+  ModalFooter,
+  ModalContent,
+  ModalBody
+} from "styled-bootstrap-components";
+import { Editor } from "@tinymce/tinymce-react";
 
-import { Input, Button } from "./AdminPanel.styled";
+import { Flex, Box, Text, link, Card, Image } from "rebass";
 
-const Basic = () => (
-  <Flex>
-    <Box p={2} width={1 / 3}>
-      <h1>Admin panel</h1>
-      <Formik
-        initialValues={{ email: "", password: "" }}
-        validate={(values) => {
-          let errors = {};
-          if (!values.email) {
-            errors.email = "Required";
-          } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-          ) {
-            errors.email = "Invalid email address";
-          }
-          return errors;
-        }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
-      >
-        {({
-          values,
-          errors,
-          touched,
-          handleChange,
-          handleBlur,
-          handleSubmit,
-          isSubmitting
-          /* and other goodies */
-        }) => (
-          <form onSubmit={handleSubmit}>
-            <Input
-              type="email"
-              name="email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-              placeholder="email"
-            />
-            {errors.email && touched.email && errors.email}
-            <Input
-              type="password"
-              name="password"
-              placeholder="password"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.password}
-            />
-            {errors.password && touched.password && errors.password}
-            <Button type="submit" disabled={isSubmitting}>
-              Submit
-            </Button>
-          </form>
-        )}
-      </Formik>
-    </Box>
-  </Flex>
-);
+import { Input, StyledModalDialog } from "./AdminPanel.styled";
 
-export default Basic;
+class EditForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hidden: true,
+      initialValue: "<p>This is the initial content of the editor</p>"
+    };
+  }
+
+  handleEditorChange = (e) => {
+    console.log("Content was updated:", e.target.getContent());
+  };
+
+  handleModal() {
+    this.setState({
+      hidden: !this.state.hidden
+    });
+  }
+
+  render() {
+    const { hidden, initialValue } = this.state;
+    return (
+      <Container my={4}>
+        <Modal hidden={hidden}>
+          <StyledModalDialog>
+            <ModalContent>
+              <ModalHeader>
+                <ModalTitle>Edit Quicklinks</ModalTitle>
+                <Button outline onClick={() => this.handleModal()}>
+                  <span aria-hidden="true">&times;</span>
+                </Button>
+              </ModalHeader>
+              <ModalBody>
+                <Editor
+                  initialValue={initialValue}
+                  init={{
+                    plugins: "link image code",
+                    toolbar:
+                      "undo redo | bold italic | alignleft aligncenter alignright | code"
+                  }}
+                  onChange={this.handleEditorChange}
+                />
+                <Flex>
+                  <Box width={[1, 1 / 2]}>
+                    <Input />
+                  </Box>
+                  <Box width={[1, 1 / 2]}>
+                    <Input />
+                  </Box>
+                </Flex>
+              </ModalBody>
+              <ModalFooter>
+                <Button onClick={() => this.handleModal()}>Close Edit</Button>
+              </ModalFooter>
+            </ModalContent>
+          </StyledModalDialog>
+        </Modal>
+        <Button bg="blue" color="white" onClick={() => this.handleModal()}>
+          Quick Link Edit
+        </Button>
+      </Container>
+    );
+  }
+}
+
+export default EditForm;
