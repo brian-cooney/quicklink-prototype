@@ -1,22 +1,26 @@
 import React, { Component } from "react";
 
-import BwkzQuickLinks from "./widgets/BwkzQuickLinks/BwkzQuickLinks";
-import BwkzQuickLinkItem from "./widgets/BwkzQuickLinks/BwkzQuickLinkItem";
-import BwkzContainer from "./components/BwkzContainer/BwkzContainer";
-import RebassGrid from "./widgets/rebass-grid/RebassGrid";
-import RebassGridFull from "./widgets/rebass-grid/RebassGridFull";
-import { BwkzQuickLinksRow } from "./widgets/BwkzQuickLinks/BwkzQuickLinks.styled";
+import GridTest from "./widgets/rebass-grid/RebassGrid";
+
 import "./App.scss";
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faStroopwafel,
+  faInfoCircle,
+  faCoffee
+} from "@fortawesome/free-solid-svg-icons";
 import "./widgets/rebass-grid/style.css";
-import FlexBox from "./widgets/rebass-grid/Flexbox";
 import EditForm from "./widgets/rebass-grid/AdminPanel";
+
+library.add(faStroopwafel, faInfoCircle, faCoffee);
 
 class App extends Component {
   state = {};
   render() {
     return (
       <div>
-        <RebassGrid />
+        <GridTest cardTitle="Brand Management" />
         {/* <RebassGridFull /> */}
         {/* <FlexBox /> */}
         {/* <Basic /> */}

@@ -7,180 +7,183 @@ import BwkzQuickLinks from "./BwkzQuickLinks";
 import BwkzQuickLinkItem from "./BwkzQuickLinkItem";
 import BwkzQuickLinkItemFull from "./BwkzQuickLinkItemFull";
 
-import BwkzContainer from "../../components/BwkzContainer/BwkzContainer.jsx";
-
 import { BwkzQuickLinksRow } from "./BwkzQuickLinks.styled.jsx";
+
 
 # QuickLinks
 
 ### The default QuickLinks Widget
 
-<BwkzContainer horizontalPadding="3"  backgroundColor="#eef1f5">
-  <BwkzQuickLinks>
-    <BwkzQuickLinksRow>
-      <BwkzQuickLinkItem
-        heading="<h2>Latest Assets</h2>"
-        headingColor="#000"
-        description="<p>Download any asset in any format</p>"
-        descriptionColour="#000"
-        buttonText="Brand"
-        buttonBackgroundColor="#bfbaaf"
-        buttonTextColor="#fff"
-        buttonBorderColor=""
-        buttonRadius=".3em"
-        lineHeight="2"
-        backgroundColor="#f3f3f3"
-        backgroundImage="https://unsplash.it/800/600?image=46"
-        cardItemWidth="40%"
-        imagePaddingHeight="100%"
+<BwkzQuickLinks>
+  <BwkzQuickLinksRow>
+    <BwkzQuickLinkItem
+      heading="<h2>Latest Assets</h2>"
+      headingColor="#000"
+      description="<p>Download any asset in any format</p>"
+      descriptionColour="#000"
+      buttonText="Brand"
+      buttonBackgroundColor="#bfbaaf"
+      buttonTextColor="#fff"
+      buttonBorderColor=""
+      buttonRadius=".3em"
+      lineHeight="2"
+      backgroundColor="#f3f3f3"
+      backgroundImage="https://unsplash.it/800/600?image=46"
+      cardItemWidth="40%"
+      imagePaddingHeight="100%"
+      boxShadow="0 20px 40px -14px rgba(0, 0, 0, 0.25)"
 
-      />
-      <BwkzQuickLinkItem
-        heading="<h2>Our media library</h2>"
-        headingColor="#000"
-        description="<p>Our most popular assets in one folder</p>"
-        descriptionColour="#000"
-        buttonText="Brand"
-        buttonBackgroundColor="#bfbaaf"
-        buttonTextColor="#fff"
-        buttonBorderColor=""
-        buttonRadius=".3em"
-        lineHeight="2"
-        backgroundColor="#f3f3f3"
-        backgroundImage="https://unsplash.it/800/600?image=22"
-        cardItemWidth="40%"
-        imagePaddingHeight="100%"
+    />
+    <BwkzQuickLinkItem
+      heading="<h2>Our media library</h2>"
+      headingColor="#000"
+      description="<p>Our most popular assets in one folder</p>"
+      descriptionColour="#000"
+      buttonText="Brand"
+      buttonBackgroundColor="#bfbaaf"
+      buttonTextColor="#fff"
+      buttonBorderColor=""
+      buttonRadius=".3em"
+      lineHeight="2"
+      backgroundColor="#f3f3f3"
+      backgroundImage="https://unsplash.it/800/600?image=22"
+      cardItemWidth="40%"
+      imagePaddingHeight="100%"
+      boxShadow="0 20px 40px -14px rgba(0, 0, 0, 0.25)"
 
-      />
-    </BwkzQuickLinksRow>
+    />
+  </BwkzQuickLinksRow>
 
-  </BwkzQuickLinks>
-</BwkzContainer>
+</BwkzQuickLinks>
 
-### Square QuickLinks Widget
+### Square QuickLinks Widget with 2 rows
 
-<BwkzContainer horizontalPadding="3"  backgroundColor="#eef1f5">
-  <BwkzQuickLinks>
-    <BwkzQuickLinksRow>
-      <BwkzQuickLinkItemFull
-        heading="<h2>Latest Assets</h2>"
-        headingColor="#fff"
-        description="<p>Download any asset in any format</p>"
-        descriptionColour="#fff"
-        buttonText="Brand"
-        buttonBackgroundColor="#bfbaaf"
-        buttonTextColor="#000"
-        buttonBorderColor=""
-        buttonRadius=".3em"
-        lineHeight="2"
-        backgroundColor="#f3f3f3"
-        backgroundImage="https://unsplash.it/800/600?image=46"
-        cardItemWidth="40%"
-        cardItemHeight="100%"
-        imagePaddingHeight="16%"
-      />
-      <BwkzQuickLinkItemFull
-        heading="<h2>Our media library</h2>"
-        headingColor="#fff"
-        description="<p>Our most popular assets in one folder</p>"
-        descriptionColour="#fff"
-        buttonText="Brand"
-        buttonBackgroundColor="#bfbaaf"
-        buttonTextColor="#fff"
-        buttonBorderColor=""
-        buttonRadius=".3em"
-        lineHeight="2"
-        backgroundColor="#f3f3f3"
-        backgroundImage="https://unsplash.it/800/600?image=22"
-        cardItemWidth="40%"
-        cardItemHeight="100%"
-        imagePaddingHeight="16%"
+<Playground>
 
-      />
-    </BwkzQuickLinksRow>
-    <BwkzQuickLinksRow>
-      <BwkzQuickLinkItemFull
-        heading="<h2>Latest Assets</h2>"
-        headingColor="#fff"
-        description="<p>Download any asset in any format</p>"
-        descriptionColour="#fff"
-        buttonText="Brand"
-        buttonBackgroundColor="#bfbaaf"
-        buttonTextColor="#000"
-        buttonBorderColor=""
-        buttonRadius=".3em"
-        lineHeight="2"
-        backgroundColor="#f3f3f3"
-        backgroundImage="https://unsplash.it/800/600?image=46"
-        cardItemWidth="40%"
-        cardItemHeight="100%"
-        imagePaddingHeight="16%"
-      />
-      <BwkzQuickLinkItemFull
-        heading="<h2>Our media library</h2>"
-        headingColor="#fff"
-        description="<p>Our most popular assets in one folder</p>"
-        descriptionColour="#fff"
-        buttonText="Brand"
-        buttonBackgroundColor="#bfbaaf"
-        buttonTextColor="#fff"
-        buttonBorderColor=""
-        buttonRadius=".3em"
-        lineHeight="2"
-        backgroundColor="#f3f3f3"
-        backgroundImage="https://unsplash.it/800/600?image=22"
-        cardItemWidth="40%"
-        cardItemHeight="100%"
-        imagePaddingHeight="16%"
+<BwkzQuickLinks
+  containerBackgroundColor="#eaeaea"
+>
+  <BwkzQuickLinksRow>
+    <BwkzQuickLinkItemFull
+      heading="<h2>Latest Assets</h2>"
+      headingColor="#fff"
+      description="<p>Download any asset in any format</p>"
+      descriptionColour="#fff"
+      buttonText="Brand"
+      buttonBackgroundColor="#bfbaaf"
+      buttonTextColor="#000"
+      buttonBorderColor=""
+      buttonRadius=".3em"
+      lineHeight="2"
+      backgroundColor="#f3f3f3"
+      backgroundImage="https://unsplash.it/800/600?image=46"
+      cardItemWidth="40%"
+      cardItemHeight="100%"
+      imagePaddingHeight="16%"
+    />
+    <BwkzQuickLinkItemFull
+      heading="<h2>Our media library</h2>"
+      headingColor="#fff"
+      description="<p>Our most popular assets in one folder</p>"
+      descriptionColour="#fff"
+      buttonText="Brand"
+      buttonBackgroundColor="#bfbaaf"
+      buttonTextColor="#fff"
+      buttonBorderColor=""
+      buttonRadius=".3em"
+      lineHeight="2"
+      backgroundColor="#f3f3f3"
+      backgroundImage="https://unsplash.it/800/600?image=22"
+      cardItemWidth="40%"
+      cardItemHeight="100%"
+      imagePaddingHeight="16%"
 
-      />
-    </BwkzQuickLinksRow>
+    />
+  </BwkzQuickLinksRow>
+  <BwkzQuickLinksRow>
+    <BwkzQuickLinkItemFull
+      heading="<h2>Latest Assets</h2>"
+      headingColor="#fff"
+      description="<p>Download any asset in any format</p>"
+      descriptionColour="#fff"
+      buttonText="Brand"
+      buttonBackgroundColor="#bfbaaf"
+      buttonTextColor="#000"
+      buttonBorderColor=""
+      buttonRadius=".3em"
+      lineHeight="2"
+      backgroundColor="#f3f3f3"
+      backgroundImage="https://unsplash.it/800/600?image=46"
+      cardItemWidth="40%"
+      cardItemHeight="100%"
+      imagePaddingHeight="16%"
+    />
+    <BwkzQuickLinkItemFull
+      heading="<h2>Our media library</h2>"
+      headingColor="#fff"
+      description="<p>Our most popular assets in one folder</p>"
+      descriptionColour="#fff"
+      buttonText="Brand"
+      buttonBackgroundColor="#bfbaaf"
+      buttonTextColor="#fff"
+      buttonBorderColor=""
+      buttonRadius=".3em"
+      lineHeight="2"
+      backgroundColor="#f3f3f3"
+      backgroundImage="https://unsplash.it/800/600?image=22"
+      cardItemWidth="40%"
+      cardItemHeight="100%"
+      imagePaddingHeight="16%"
 
-  </BwkzQuickLinks>
-</BwkzContainer>
+    />
+  </BwkzQuickLinksRow>
+
+</BwkzQuickLinks>
+</Playground>
 
 ### QuickLinks Widget with background image set.
 
-<BwkzContainer horizontalPadding="3"  backgroundImage="https://unsplash.it/800/600?image=43">
-  <BwkzQuickLinks>
-    <BwkzQuickLinksRow>
-      <BwkzQuickLinkItem
-        heading="<h2>Latest Assets</h2>"
-        headingColor="#000"
-        description="<p>Download any asset in any format</p>"
-        descriptionColour="#000"
-        buttonText="Brand"
-        buttonBackgroundColor="#bfbaaf"
-        buttonTextColor="#fff"
-        buttonBorderColor=""
-        buttonRadius=".3em"
-        lineHeight="2"
-        backgroundColor="#f3f3f3"
-        backgroundImage="https://unsplash.it/800/600?image=46"
-        cardItemWidth="40%"
-        imagePaddingHeight="100%"
-      />
-      <BwkzQuickLinkItem
-        heading="<h2>Our media library</h2>"
-        headingColor="#000"
-        description="<p>Our most popular assets in one folder</p>"
-        descriptionColour="#000"
-        buttonText="Brand"
-        buttonBackgroundColor="#bfbaaf"
-        buttonTextColor="#fff"
-        buttonBorderColor=""
-        buttonRadius=".3em"
-        lineHeight="2"
-        backgroundColor="#f3f3f3"
-        backgroundImage="https://unsplash.it/800/600?image=22"
-        cardItemWidth="40%"
-        imagePaddingHeight="100%"
+<BwkzQuickLinks>
+  <BwkzQuickLinksRow>
+    <BwkzQuickLinkItem
+      heading="<h2>Latest Assets</h2>"
+      headingColor="#000"
+      description="<p>Download any asset in any format</p>"
+      descriptionColour="#000"
+      buttonText="Brand"
+      buttonBackgroundColor="#bfbaaf"
+      buttonTextColor="#fff"
+      buttonBorderColor=""
+      buttonRadius=".3em"
+      lineHeight="2"
+      backgroundColor="#f3f3f3"
+      backgroundImage="https://unsplash.it/800/600?image=46"
+      cardItemWidth="40%"
+      imagePaddingHeight="100%"
+    />
+    <BwkzQuickLinkItem
+      heading="<h2>Our media library</h2>"
+      headingColor="#000"
+      description="<p>Our most popular assets in one folder</p>"
+      descriptionColour="#000"
+      buttonText="Brand"
+      buttonBackgroundColor="#bfbaaf"
+      buttonTextColor="#fff"
+      buttonBorderColor=""
+      buttonRadius=".3em"
+      lineHeight="2"
+      backgroundColor="#f3f3f3"
+      backgroundImage="https://unsplash.it/800/600?image=22"
+      cardItemWidth="40%"
+      imagePaddingHeight="100%"
 
-      />
-    </BwkzQuickLinksRow>
+    />
+  </BwkzQuickLinksRow>
 
-  </BwkzQuickLinks>
-</BwkzContainer>
+</BwkzQuickLinks>
+
+<PropsTable of={BwkzQuickLinks} />
+
 
 #### BwkzQuickLinkItem
 
@@ -192,20 +195,24 @@ _Propperty table for each quicklink card BwkzQuickLinkItem_
 
 <Playground>
   <BwkzQuickLinks>
-    <BwkzQuickLinkItem
-      heading="<h2>Sales Channel</h2>"
-      headingColor="#000"
-      description="<p>Templates for Q4 shareholders meeting</p>"
-      descriptionColour="#000"
-      buttonText="Brand"
-      buttonBackgroundColor="#bfbaaf"
-      buttonTextColor="#fff"
-      buttonBorderColor=""
-      buttonRadius=".3em"
-      lineHeight="2"
-      backgroundColor="#f3f3f3"
-      backgroundImage="https://unsplash.it/800/600?image=38"
-      cardItemWidth="40%"
-    />
+  <BwkzQuickLinkItem
+        heading="<h2>Latest Assets</h2>"
+        headingColor="#000"
+        description="<p>Download any asset in any format</p>"
+        descriptionColour="#000"
+        buttonText="Brand"
+        buttonBackgroundColor="#bfbaaf"
+        buttonTextColor="#fff"
+        buttonBorderColor=""
+        buttonRadius=".3em"
+        lineHeight="2"
+        backgroundColor="#f3f3f3"
+        backgroundImage="https://unsplash.it/400/400?image=49"
+        cardItemWidth="40%"
+        imagePaddingHeight="100%"
+        boxShadow="0 20px 40px -14px rgba(0, 0, 0, 0.25)"
+
+      />
+
   </BwkzQuickLinks>
 </Playground>

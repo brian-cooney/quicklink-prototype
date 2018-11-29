@@ -1,0 +1,35 @@
+---
+    name: "BwkzSectionDropdown component"
+---
+
+import {Playground, PropsTable} from 'docz';
+import BwkzSectionDropdown from './BwkzSectionDropdown';
+
+# BwkzSectionDropdown Component
+
+This is a component used to section off content within Brandworkz. Typically appears in forms here parts of a form can be hidden broken down into sections with a default first option to be open.
+
+### The section as default
+
+<BwkzSectionDropdown>
+    Children of the component are inserted here.
+</BwkzSectionDropdown>
+
+_Note that the font-height is specified in `em` so will appear different depending on the system installed. Also the fonts have not been modified and would take the systems defaults._
+
+<PropsTable of={BwkzSectionDropdown}/>
+
+<Playground>
+    <BwkzSectionDropdown headerText="Section 1" open={true}>
+        <h1>This is Section Content 1</h1>
+        <p>Any component or HTML can be added to this component and it will appear in here</p>
+    </BwkzSectionDropdown>
+    <BwkzSectionDropdown headerText="Section 2" open={false}>
+        <h1>This is Section Content 2</h1>
+        <p>Any component or HTML can be added to this component and it will appear in here</p>
+    </BwkzSectionDropdown>
+    <BwkzSectionDropdown headerText="Section 3" open={false}>
+        <h1>This is Section Content 3</h1>
+        <p>Any component or HTML can be added to this component and it will appear in here</p>
+    </BwkzSectionDropdown>
+</Playground>

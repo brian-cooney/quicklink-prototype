@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import calculator from '../../lib/calculator';
+import calculator from "../../lib/calculator";
 
-import { BwkzContainer } from './BwkzContainer.styled';
+import { BwkzContainer } from "./BwkzContainer.styled";
 
 class BwkzContainerComponent extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      verticalPadding: 0,
+      verticalPadding: 0
     };
 
     this.containerRef = React.createRef();
@@ -21,7 +21,7 @@ class BwkzContainerComponent extends Component {
 
     const verticalPadding = calculator.calculateVerticalPadding(
       this.containerRef.current.clientHeight - offset,
-      minHeight,
+      minHeight
     );
 
     this.setState({ verticalPadding });
@@ -41,7 +41,7 @@ class BwkzContainerComponent extends Component {
         backgroundColor={styles.backgroundColor}
         backgroundImage={styles.backgroundImage}
         horizontalPadding={styles.horizontalPadding}
-        verticalPadding={verticalPadding}
+        verticalPadding="0"
         minHeight={styles.minHeight}
         ref={this.containerRef}
       >
@@ -52,11 +52,11 @@ class BwkzContainerComponent extends Component {
 }
 
 BwkzContainerComponent.defaultProps = {
-  backgroundColor: 'transparent',
-  backgroundImage: '',
-  minHeight: '',
-  horizontalPadding: '10%',
-  offset: 0,
+  backgroundColor: "transparent",
+  backgroundImage: "",
+  minHeight: "",
+  horizontalPadding: "10%",
+  offset: 0
 };
 
 BwkzContainerComponent.propTypes = {
@@ -74,7 +74,7 @@ BwkzContainerComponent.propTypes = {
    */
   offset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-  children: PropTypes.oneOfType([PropTypes.node]).isRequired,
+  children: PropTypes.oneOfType([PropTypes.node]).isRequired
 };
 
 export default BwkzContainerComponent;

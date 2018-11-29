@@ -1,5 +1,4 @@
 import React from "react";
-import { Flex, Box, Text, link, Card, Image, Button, Heading } from "rebass";
 
 const FlexBox = () => {
   return (

@@ -1,9 +1,8 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro';
 
 export const BwkzQuickLinks = styled.div`
-  background-color: ${(props) => props.backgroundColor};
-  background-image: ${(props) =>
-    props.backgroundImage && `url(${props.backgroundImage})`};
+  background-color: ${props => props.backgroundColor};
+  background-image: ${props => props.backgroundImage && `url(${props.backgroundImage})`};
 `;
 
 export const BwkzQuickLinksRow = styled.ul`
@@ -20,17 +19,17 @@ export const BwkzQuickLinksCol = styled.li`
   display: flex;
   padding: 1rem;
   @media (min-width: 40rem) {
-    width: ${(props) => props.cardItemWidth};
+    width: ${props => props.cardItemWidth};
   }
   @media (min-width: 56rem) {
-    width: ${(props) => props.cardItemWidth};
+    width: ${props => props.cardItemWidth};
   }
 `;
 
 export const BwkzQuickLinksCard = styled.div`
   background-color: white;
   border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  box-shadow: ${props => props.boxshadow};
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -38,23 +37,21 @@ export const BwkzQuickLinksCard = styled.div`
 `;
 
 export const BwkzQuickLinksCardFullImage = styled.div`
-  background-image: ${(props) =>
-    props.backgroundImage && `url(${props.backgroundImage})`};
+  background-image: ${props => props.backgroundImage && `url(${props.backgroundImage})`};
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
   border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  box-shadow: ${props => props.boxshadow};
   display: flex;
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  height: ${(props) => props.cardItemHeight};
+  height: ${props => props.cardItemHeight};
 `;
 
 export const BwkzQuickLinksImage = styled.div`
-  background-image: ${(props) =>
-    props.backgroundImage && `url(${props.backgroundImage})`};
+  background-image: ${props => props.backgroundImage && `url(${props.backgroundImage})`};
   background-repeat: no-repeat;
   background-size: cover;
   border-top-left-radius: 0.25rem;
@@ -63,9 +60,9 @@ export const BwkzQuickLinksImage = styled.div`
   position: relative;
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
   ::before {
-    content: "";
+    content: '';
     display: block;
-    padding-top: ${(props) => props.imagePaddingHeight};
+    padding-top: ${props => props.imagePaddingHeight};
   }
 `;
 
@@ -78,9 +75,9 @@ export const BwkzQuickLinksFullImage = styled.div`
   position: relative;
   transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
   ::before {
-    content: "";
+    content: '';
     display: block;
-    padding-top: ${(props) => props.imagePaddingHeight};
+    padding-top: ${props => props.imagePaddingHeight};
   }
 `;
 
@@ -100,7 +97,7 @@ export const BwkzQuickLinksCardTitle = styled.div`
   flex: 1 1 auto;
   flex-direction: column;
   font-weight: 600;
-  color: ${(props) => props.headingColor};
+  color: ${props => props.headingColor};
 `;
 
 export const BwkzQuickLinksCardText = styled.div`
@@ -108,5 +105,5 @@ export const BwkzQuickLinksCardText = styled.div`
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
-  color: ${(props) => props.descriptionColour};
+  color: ${props => props.descriptionColour};
 `;

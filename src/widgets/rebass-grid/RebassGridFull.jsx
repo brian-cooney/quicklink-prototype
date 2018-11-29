@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, link, Card, Image, Button, Heading } from "rebass";
+import { Flex, Box, Text, Card, Button } from "rebass";
 
 const GridTest = () => {
   const row = [1, 2];

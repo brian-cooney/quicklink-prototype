@@ -1,7 +1,7 @@
 import React from "react";
-import { Flex, Box, Text, link, Card, Image, Button } from "rebass";
+import { Flex, Box, Text, Card, Image, Button } from "rebass";
 
-const GridTest = () => {
+const GridTest = (props) => {
   const row = [1, 2];
   const col = [1, 2, 3, 4];
 
@@ -17,7 +17,7 @@ const GridTest = () => {
               borderRadius={2}
             />
             <Text p={2} pb={3} fontWeight="bold">
-              Library
+              {props.cardTitle}
             </Text>
             <Text p={2}>Request access to the Q4 results</Text>
             <Box p={2}>

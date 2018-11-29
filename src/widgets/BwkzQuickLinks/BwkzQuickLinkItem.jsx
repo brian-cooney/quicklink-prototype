@@ -26,10 +26,11 @@ const BwkzQuickLinkItemComponent = (props) => {
     buttonRadius,
     cardItemWidth,
     imagePaddingHeight,
+    boxshadow,
   } = props;
   return (
     <BwkzQuickLinksCol cardItemWidth={cardItemWidth}>
-      <BwkzQuickLinksCard>
+      <BwkzQuickLinksCard boxshadow={boxshadow}>
         <BwkzQuickLinksImage
           backgroundImage={backgroundImage}
           imagePaddingHeight={imagePaddingHeight}
@@ -63,16 +64,17 @@ export default BwkzQuickLinkItemComponent;
 BwkzQuickLinkItemComponent.defaultProps = {
   backgroundImage: '',
   heading: '',
-  headingColor: '',
+  headingColor: '#000',
   description: '',
-  descriptionColour: '',
+  descriptionColour: '#000',
   buttonText: '',
-  buttonBackgroundColor: '',
-  buttonTextColor: '',
+  buttonBackgroundColor: '#eee',
+  buttonTextColor: '#fff',
   buttonBorderColor: '',
-  buttonRadius: '',
+  buttonRadius: '5px',
   cardItemWidth: '',
   imagePaddingHeight: '',
+  boxshadow: '0 20px 40px -14px rgba(0, 0, 0, 0.25)',
 };
 
 BwkzQuickLinkItemComponent.propTypes = {
@@ -100,4 +102,6 @@ BwkzQuickLinkItemComponent.propTypes = {
   cardItemWidth: PropTypes.string,
   /** Card Coloum width */
   imagePaddingHeight: PropTypes.string,
+  /** Card boxshadow */
+  boxshadow: PropTypes.string,
 };
