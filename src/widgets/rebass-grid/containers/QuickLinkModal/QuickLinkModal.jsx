@@ -34,7 +34,6 @@ class QuickLinkModal extends Component {
               <GeneralOptions />
               <ButtonOptions />
               <RowOptions />
-              <QuickLinkItem />
             </ModalBody>
             <ModalFooter>
               <Button onClick={closeModal}>Close Edit</Button>

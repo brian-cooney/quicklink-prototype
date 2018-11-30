@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import { Flex, Box } from "rebass";
+import { Flex, Box, Text, Button } from "rebass";
+import { Editor } from "@tinymce/tinymce-react";
 
 import BwkzSelectionDropdown from "../../../BwkzSectionDropdown/BwkzSectionDropdown";
 
 import BwkzInputGroupItem from "../../../BwkzInputGroupItem/BwkzInputGroupItem";
+import QuickLinkItem from "../QuickLinkItem/QuickLinkItem";
 
 class RowOptions extends Component {
-  state = {};
+  handleEditorChange = (e) => {
+    console.log("Content was updated:", e.target.getContent());
+  };
+
   render() {
     const rebassGrid = [1, 1 / 2, 1 / 3];
     return (
@@ -80,7 +85,7 @@ class RowOptions extends Component {
             />
           </Box>
         </Flex>
-        <Flex flexWrap="wrap" mt={4}>
+        <Flex flexWrap="wrap" mt={4} mb={4}>
           <Box px={2} width={rebassGrid}>
             <BwkzInputGroupItem
               labelTitle="Show Drop Shadow"
@@ -103,6 +108,12 @@ class RowOptions extends Component {
             />
           </Box>
         </Flex>
+        <QuickLinkItem quickLinkTitle="Quick Links 1" />
+        <QuickLinkItem quickLinkTitle="Quick Links 2" />
+        <QuickLinkItem quickLinkTitle="Quick Links 3" />
+        <Button bg="white" color="grey" border={1} ml={2} mb={2}>
+          Add Quick Link
+        </Button>
       </BwkzSelectionDropdown>
     );
   }

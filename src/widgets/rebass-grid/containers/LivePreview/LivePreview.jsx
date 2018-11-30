@@ -12,7 +12,7 @@ class LivePreview extends Component {
   state = {};
   render() {
     return (
-      <BwkzSelectionDropdown headerText="General Options">
+      <BwkzSelectionDropdown headerText="Live Preview">
         <BwkzQuickLinks>
           <BwkzQuickLinksRow>
             <BwkzQuickLinkItem

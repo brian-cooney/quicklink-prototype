@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import GridTest from "./widgets/rebass-grid/RebassGrid";
+import { Formik } from "formik";
 
 import "./App.scss";
 
