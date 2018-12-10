@@ -1,0 +1,15 @@
+{
+  "name": "bwkz-widget-libraries",
+  "version": "1.0.0",
+  "description": "Library files for BwkzLibrary",
+  "main": "index.js",
+  "author": "James Seabrook",
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react-slick": "^0.23.2"
+  },
+  "devDependencies": {
+    "styled-components": "^4.0.3"
+  }
+}

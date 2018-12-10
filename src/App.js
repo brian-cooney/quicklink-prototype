@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
-import GridTest from "./widgets/rebass-grid/RebassGrid";
+import GridTest from "./widgets/rebass-grid/GridTest";
 import { Formik } from "formik";
+import { Router, Link } from "@reach/router";
+import NavBar from "./widgets/NavBar/NavBar";
 
 import "./App.scss";
 
@@ -12,7 +14,8 @@ import {
   faCoffee
 } from "@fortawesome/free-solid-svg-icons";
 import "./widgets/rebass-grid/style.css";
-import EditForm from "./widgets/rebass-grid/AdminPanel";
+import EditForm from "./widgets/rebass-grid/EditForm";
+import FormTest from "./widgets/Formik/Formik";
 
 library.add(faStroopwafel, faInfoCircle, faCoffee);
 
@@ -21,13 +24,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        <GridTest cardTitle="Brand Management" />
-        {/* <RebassGridFull /> */}
-        {/* <FlexBox /> */}
-        {/* <Basic /> */}
-        <div>---</div>
-        <EditForm />
-        {/* <MyForm /> */}
+        <NavBar />
+        <Router>
+          <Home path="/" />
+          <EditForm path="/editform" />
+          <GridTest path="/gridtest" />
+          <FormTest path="/formik" />
+        </Router>
+        {/* <Router>
+          <GridTest path="/dashboard" cardTitle="Brand Management" />
+          <EditForm />
+        </Router> */}
       </div>
     );
   }
@@ -35,33 +42,14 @@ class App extends Component {
 
 export default App;
 
-/* <BwkzContainer
-        horizontalPadding="3"
-        backgroundColor="#eef1f5"
-        backgroundImage="https://unsplash.it/1800/600?image=47"
-      >
-        <BwkzQuickLinks>
-          {row.map((item) => (
-            <BwkzQuickLinksRow>
-              {col.map((item) => (
-                <BwkzQuickLinkItem
-                  heading="<h2>Latest Assets</h2>"
-                  headingColor="#000"
-                  description="<p>Download any asset in any format</p>"
-                  descriptionColour="#000"
-                  buttonText="Brand"
-                  buttonBackgroundColor="#bfbaaf"
-                  buttonTextColor="#fff"
-                  buttonBorderColor=""
-                  buttonRadius=".3em"
-                  lineHeight="2"
-                  backgroundColor="#f3f3f3"
-                  backgroundImage={`https://unsplash.it/800/600?image=4${item}`}
-                  cardItemWidth="20%"
-                  imagePaddingHeight="100%"
-                />
-              ))}
-            </BwkzQuickLinksRow>
-          ))}
-        </BwkzQuickLinks>
-      </BwkzContainer> */
+const Home = () => (
+  <div>
+    <h2>Default</h2>
+  </div>
+);
+
+const Dashboard = () => (
+  <div>
+    <h2>Dashboard</h2>
+  </div>
+);

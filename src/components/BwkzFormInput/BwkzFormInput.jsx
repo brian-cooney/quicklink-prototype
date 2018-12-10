@@ -7,9 +7,20 @@ const BwkzFormInputComponent = ({
   placeholder,
   position,
   labelTitle,
+  handleChange,
+  handleBlur,
 
   ...styles
-}) => <BwkzFormInput {...styles} placeholder={placeholder} />;
+}) => (
+  <BwkzFormInput
+    {...styles}
+    placeholder={placeholder}
+    type="text"
+    name="BackgroundColour"
+    onChange={handleChange}
+    onBlur={handleBlur}
+  />
+);
 
 BwkzFormInputComponent.defaultProps = {
   borderRadius: ".25em",
@@ -25,7 +36,6 @@ BwkzFormInputComponent.propTypes = {
   backgroundColor: PropTypes.string,
   placeholderColor: PropTypes.string,
   lineHeight: PropTypes.string,
-
   placeholder: PropTypes.string
 };
 

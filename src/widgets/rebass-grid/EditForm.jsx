@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Button } from "styled-bootstrap-components";
+import { Button } from "styled-bootstrap-components";
 
 import QuickLinkModal from "./containers/QuickLinkModal/QuickLinkModal";
 
@@ -20,12 +20,14 @@ class EditForm extends Component {
   render() {
     const { hidden } = this.state;
     return (
-      <Container my={4}>
+      <div>
         <QuickLinkModal hidden={hidden} closeModal={this.handleModal} />
         <Button bg="blue" color="white" onClick={() => this.handleModal()}>
           Quick Link Edit
         </Button>
-      </Container>
+
+        <h1>Hello World</h1>
+      </div>
     );
   }
 }

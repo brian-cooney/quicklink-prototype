@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Flex, Box } from "rebass";
+import { withFormik } from "formik";
 
 import BwkzSelectionDropdown from "../../../BwkzSectionDropdown/BwkzSectionDropdown";
 
@@ -8,6 +9,8 @@ import BwkzInputGroupItem from "../../../BwkzInputGroupItem/BwkzInputGroupItem";
 class ButtonOptions extends Component {
   state = {};
   render() {
+    const { values, handleChange } = this.props;
+
     const rebassGrid = [1, 1 / 2, 1 / 3];
     return (
       <BwkzSelectionDropdown headerText="Button Options">
@@ -37,9 +40,12 @@ class ButtonOptions extends Component {
         <Flex flexWrap="wrap" mt={2} mb={2}>
           <Box px={2} width={rebassGrid}>
             <BwkzInputGroupItem
+              type="text"
+              name="BackgroundColour"
               labelTitle="Button Background Colour"
               placeholder="placeholder"
               tooltipText="changes the button background colour"
+              buttonBackgroundColor={values.buttonBackgroundColor}
             />
           </Box>
           <Box px={2} width={rebassGrid}>
@@ -62,4 +68,6 @@ class ButtonOptions extends Component {
   }
 }
 
-export default ButtonOptions;
+export default withFormik({
+  mapPropsToValues: () => ({ buttonBackgroundColor: "" })
+})(ButtonOptions);
